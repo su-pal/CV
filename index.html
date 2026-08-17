@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subrata Pal — Chemistry CV</title>
+<meta name="description" content="Subrata Pal, Ph.D. Candidate in Chemistry at Oklahoma State University. Research in cobalt-photocatalyzed reactions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#101820;
+    --navy:#1c2b45;
+    --paper:#f6f5f1;
+    --paper-raised:#ffffff;
+    --line:#dcd8cd;
+    --teal:#2f7d78;
+    --amber:#c1621c;
+    --muted:#5b6470;
+    --radius:2px;
+    --maxw:880px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    line-height:1.6;
+    font-size:16px;
+  }
+  a{color:var(--teal);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  h1,h2,h3{font-family:'Source Serif 4',serif;font-weight:600;color:var(--navy);}
+  .mono{font-family:'JetBrains Mono',monospace;}
+
+  /* ---- Nav ---- */
+  header{
+    position:sticky;top:0;z-index:100;
+    background:rgba(246,245,241,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    max-width:var(--maxw);margin:0 auto;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 24px;
+  }
+  .nav-name{font-family:'Source Serif 4',serif;font-weight:700;font-size:1.05rem;color:var(--navy);letter-spacing:0.02em;}
+  nav ul{list-style:none;display:flex;gap:22px;flex-wrap:wrap;}
+  nav a{
+    font-size:0.85rem;font-weight:500;color:var(--muted);
+    text-transform:uppercase;letter-spacing:0.06em;
+    padding:4px 2px;border-bottom:2px solid transparent;
+  }
+  nav a:hover, nav a.active{color:var(--navy);border-bottom-color:var(--amber);text-decoration:none;}
+  #nav-toggle{display:none;}
+  .burger{display:none;font-size:1.4rem;background:none;border:none;color:var(--navy);cursor:pointer;}
+
+  @media (max-width:700px){
+    nav ul{
+      position:absolute;top:100%;left:0;right:0;
+      background:var(--paper);border-bottom:1px solid var(--line);
+      flex-direction:column;gap:0;max-height:0;overflow:hidden;transition:max-height .25s ease;
+    }
+    #nav-toggle:checked ~ ul{max-height:400px;}
+    nav ul li{border-top:1px solid var(--line);}
+    nav a{display:block;padding:12px 24px;}
+    .burger{display:block;}
+  }
+
+  /* ---- Hero ---- */
+  .hero{max-width:var(--maxw);margin:0 auto;padding:64px 24px 40px;}
+  .hero-grid{display:grid;grid-template-columns:150px 1fr;gap:32px;align-items:start;}
+  @media (max-width:600px){.hero-grid{grid-template-columns:1fr;}}
+  .hero-photo{
+    width:150px;height:150px;border-radius:50%;object-fit:cover;
+    border:3px solid var(--paper-raised);box-shadow:0 0 0 1px var(--line);
+  }
+  .eyebrow{font-family:'JetBrains Mono',monospace;font-size:0.78rem;color:var(--teal);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px;}
+  .hero h1{font-size:2.4rem;line-height:1.15;margin-bottom:6px;}
+  .hero .role{color:var(--muted);font-size:1.05rem;margin-bottom:18px;}
+  .hero p.lede{max-width:60ch;color:#333;}
+  .hero .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:22px;}
+  .btn{
+    display:inline-flex;align-items:center;gap:6px;
+    padding:10px 18px;border-radius:var(--radius);
+    font-size:0.88rem;font-weight:600;letter-spacing:0.02em;
+    border:1px solid var(--navy);
+  }
+  .btn-primary{background:var(--navy);color:#fff;}
+  .btn-primary:hover{background:#132038;text-decoration:none;}
+  .btn-ghost{background:transparent;color:var(--navy);}
+  .btn-ghost:hover{background:var(--navy);color:#fff;text-decoration:none;}
+  .social-row{display:flex;gap:16px;margin-top:16px;font-size:0.85rem;}
+
+  /* ---- Sections ---- */
+  section{max-width:var(--maxw);margin:0 auto;padding:44px 24px;border-top:1px solid var(--line);}
+  section > h2{
+    font-size:0.82rem;text-transform:uppercase;letter-spacing:0.12em;
+    color:var(--amber);font-family:'JetBrains Mono',monospace;font-weight:500;
+    margin-bottom:28px;
+  }
+  section > h2::before{content:"§ ";}
+
+  .entry{margin-bottom:28px;}
+  .entry:last-child{margin-bottom:0;}
+  .entry-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;}
+  .entry-title{font-family:'Source Serif 4',serif;font-weight:600;font-size:1.08rem;color:var(--navy);}
+  .entry-date{font-family:'JetBrains Mono',monospace;font-size:0.78rem;color:var(--muted);white-space:nowrap;}
+  .entry-sub{color:var(--teal);font-size:0.92rem;font-weight:500;margin-top:2px;}
+  .entry-place{color:var(--muted);font-size:0.88rem;margin-top:2px;}
+  .entry ul{margin-top:10px;padding-left:20px;}
+  .entry ul li{margin-bottom:6px;font-size:0.95rem;}
+  .entry p{margin-top:8px;font-size:0.95rem;color:#333;}
+
+  /* skills */
+  .skill-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;}
+  @media (max-width:600px){.skill-grid{grid-template-columns:1fr;}}
+  .skill-cat h3{font-size:0.95rem;margin-bottom:10px;color:var(--navy);}
+  .tag-row{display:flex;flex-wrap:wrap;gap:8px;}
+  .tag{
+    font-family:'JetBrains Mono',monospace;font-size:0.76rem;
+    background:var(--paper-raised);border:1px solid var(--line);
+    padding:5px 10px;border-radius:var(--radius);color:#333;
+  }
+
+  /* publications */
+  .pub{border-left:2px solid var(--teal);padding-left:16px;margin-bottom:18px;}
+  .pub-tag{font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--teal);text-transform:uppercase;letter-spacing:0.05em;}
+  .pub-text{font-size:0.95rem;margin-top:4px;}
+
+  footer{
+    max-width:var(--maxw);margin:0 auto;padding:40px 24px 60px;
+    border-top:1px solid var(--line);
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
+  }
+  footer .muted{color:var(--muted);font-size:0.82rem;}
+
+  :focus-visible{outline:2px solid var(--amber);outline-offset:2px;}
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <a href="#top" class="nav-name">SUBRATA PAL</a>
+    <input type="checkbox" id="nav-toggle">
+    <label for="nav-toggle" class="burger" aria-label="Toggle menu">☰</label>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#presentations">Talks</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div id="top"></div>
+
+<section class="hero" id="about" style="border-top:none;padding-top:56px;">
+  <div class="hero-grid">
+    <img src="assets/profile.jpg" alt="Portrait of Subrata Pal" class="hero-photo" onerror="this.style.display='none'">
+    <div>
+      <div class="eyebrow">Ph.D. Candidate · Chemistry</div>
+      <h1>Subrata Pal</h1>
+      <div class="role">Oklahoma State University — Pitre Lab, Stillwater, OK</div>
+      <p class="lede">
+        I work on cobalt-photocatalyzed reactions, studying first-row transition metal (Co) photocatalysts
+        and their use in carbon–carbon bond-forming reactions for pharmaceutically relevant molecules.
+        Currently seeking postdoctoral research positions in photoredox catalysis or synthetic methodology
+        development, with long-term interests in an independent academic research career.
+      </p>
+      <div class="cta-row">
+        <a href="assets/Subrata_Pal_CV.pdf" class="btn btn-primary">Download CV</a>
+        <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      </div>
+      <div class="social-row">
+        <a href="https://www.linkedin.com/in/subrata-pal1" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=A8R_AuMAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="https://orcid.org/0000-0002-8070-7318" target="_blank" rel="noopener">ORCID</a>
+        <a href="mailto:supal@okstate.edu">Email</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+
+  <div class="entry">
+    <div class="entry-head">
+      <div class="entry-title">Doctor of Philosophy (Ph.D.), Chemistry</div>
+      <div class="entry-date">Aug 2022 – Present (Expected Dec 2027)</div>
+    </div>
+    <div class="entry-sub">Oklahoma State University, Stillwater, OK</div>
+    <div class="entry-place">Advisor: Dr. Spencer P. Pitre</div>
+    <p>Dissertation (working title): "Structure–Activity Relationship Investigation of Cobalt Complexes for Photocatalyzed Reactions Under Visible Light Irradiation."</p>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <div class="entry-title">Master of Science (MS), Chemistry</div>
+      <div class="entry-date">Jan 2016 – Apr 2018</div>
+    </div>
+    <div class="entry-sub">Shahjalal University of Science &amp; Technology, Sylhet, Bangladesh</div>
+    <div class="entry-place">Advisor: Dr. Mohammad Mizanur Rahman Khan</div>
+    <p>Dissertation: "Synthesis and Investigation of PVA–ZnS and PVA–AgI–ZnO Nanocomposite Films: Towards Efficient and Stable Photocatalyst for Organic Dye Removal."</p>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <div class="entry-title">Bachelor of Science (B.Sc.), Chemistry</div>
+      <div class="entry-date">Jan 2011 – Dec 2015</div>
+    </div>
+    <div class="entry-sub">Shahjalal University of Science &amp; Technology, Sylhet, Bangladesh</div>
+  </div>
+</section>
+
+<section id="research">
+  <h2>Research Experience</h2>
+
+  <div class="entry">
+    <div class="entry-head">
+      <div class="entry-title">Graduate Research Assistant — Pitre Lab</div>
+      <div class="entry-date">Jan 2025 – Present</div>
+    </div>
+    <div class="entry-place">Oklahoma State University, Stillwater, OK</div>
+    <ul>
+      <li>Synthesized a library of cobaloxime catalysts and evaluated their catalytic performance alongside commercially available Co(II) catalysts in Giese-type reactions.</li>
+      <li>Enabled acid-free regioselective cobalt-photocatalyzed C–H Minisci alkylation through urea activation of pyridines.</li>
+      <li>Employed TLC, 1D/2D NMR spectroscopy, and GC–MS to characterize reaction intermediates and products.</li>
+      <li>Performed computational studies using Gaussian and ORCA to calculate bond dissociation energies (BDEs) and redox potentials.</li>
+      <li>Mentored one undergraduate researcher.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <div class="entry-title">Graduate Research Assistant — MMR Khan Research Group</div>
+      <div class="entry-date">Jan 2016 – Apr 2018</div>
+    </div>
+    <div class="entry-place">Shahjalal University of Science &amp; Technology, Sylhet, Bangladesh</div>
+    <ul>
+      <li>Synthesized PVA–ZnS and PVA–AgI–ZnO nanocomposite films with varied PVA compositions.</li>
+      <li>Investigated their photocatalytic activity toward organic dye degradation.</li>
+      <li>Employed FT–IR, UV-vis, and PL spectroscopy to characterize the nanocomposite films.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="publications">
+  <h2>Publications</h2>
+
+  <div class="pub">
+    <div class="pub-tag">Tutorial · 2026</div>
+    <div class="pub-text">Pal, S.; Pauze, M.; Shafiei, N.; Pitre, S. P. "Base Metal Photocatalysts: A Bright Future in Photoredox Catalysis?" <em>Organometallics</em> 2026, 45 (6), 587–612.</div>
+  </div>
+
+  <div class="pub">
+    <div class="pub-tag">Experimental · 2019</div>
+    <div class="pub-text">Khan, M. M. R.; Pal, S.; Hoque, M. M.; Alam, M. R.; Younus, M.; Kobayashi, H. "Simple Fabrication of PVA–ZnS Composite Films with Superior Photocatalytic Performance: Enhanced Luminescence Property, Morphology, and Thermal Stability." <em>ACS Omega</em> 2019, 4 (4), 6144–6153.</div>
+  </div>
+</section>
+
+<section id="presentations">
+  <h2>Presentations</h2>
+
+  <h3 style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:14px;">Oral</h3>
+  <div class="entry">
+    <div class="entry-head">
+      <div class="entry-title">67th Annual ACS Pentasectional Meeting</div>
+      <div class="entry-date">Apr 2026</div>
+    </div>
+    <p>Pal, S.; Pauze, M.; Pitre, S. P. "Structure-Activity Relationship Investigation of Cobalt Complexes for Photocatalyzed Reactions Under Visible Light Irradiation," Pittsburg State University, Pittsburg, KS.</p>
+  </div>
+  <div class="entry">
+    <div class="entry-head">
+      <div class="entry-title">66th Annual ACS Pentasectional Meeting</div>
+      <div class="entry-date">Mar 2025</div>
+    </div>
+    <p>Pal, S.; Pitre, S. P. "Investigation of Cobalt(II) Complexes for Photocatalyzed Reactions Under Visible Light Irradiation," Oral Roberts University, Tulsa, OK.</p>
+  </div>
+
+  <h3 style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin:24px 0 14px;">Poster</h3>
+  <div class="entry">
+    <div class="entry-head">
+      <div class="entry-title">ACS Southwest Regional Meeting</div>
+      <div class="entry-date">Oct 2024</div>
+    </div>
+    <p>Pal, S.; Pitre, S. P. "Investigation of Cobalt(II) Complexes for Photocatalyzed Reactions Under Visible Light Irradiation," Waco Convention Center, Waco, TX.</p>
+  </div>
+  <div class="entry">
+    <div class="entry-head">
+      <div class="entry-title">ACS Southwest Regional Meeting</div>
+      <div class="entry-date">Nov 2023</div>
+    </div>
+    <p>Pal, S.; Pitre, S. P. "Cobaloxime-Photocatalyzed Minisci Reactions Under Visible Light Irradiation," Omni Oklahoma City Hotel, OKC, OK.</p>
+  </div>
+  <div class="entry">
+    <div class="entry-head">
+      <div class="entry-title">International Conference on Nanotechnology and Condensed Matter Physics</div>
+      <div class="entry-date">Jan 2018</div>
+    </div>
+    <p>Pal, S.; Khan, M. M. R.; Oliullah, M. "Synthesis, Interaction and Thermal Properties of PVA-ZnS Nanocomposite Films: Application as Stable Photocatalyst for Organic Dye Removal," Dept. of Physics, Bangladesh University of Engineering and Technology, Dhaka.</p>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Professional Experience</h2>
+
+  <div class="entry">
+    <div class="entry-head">
+      <div class="entry-title">Graduate Teaching Assistant</div>
+      <div class="entry-date">Aug 2022 – Dec 2024</div>
+    </div>
+    <div class="entry-place">Department of Chemistry, Oklahoma State University, Stillwater, OK</div>
+    <ul>
+      <li>Instructed General Chemistry I Lab, Organic Chemistry I, and Survey of Organic Chemistry and Lab.</li>
+      <li>Led laboratory sessions of approximately 50 undergraduate students per semester; graded lab reports and exams.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <div class="entry-title">Lecturer (Chemistry)</div>
+      <div class="entry-date">Sep 2019 – Jul 2022</div>
+    </div>
+    <div class="entry-place">Green University of Bangladesh, Purbachal American City, Narayanganj, Bangladesh</div>
+    <ul>
+      <li>Instructed General Chemistry and Organic Chemistry (theory and laboratory).</li>
+      <li>Led weekly discussion sections and laboratory sessions for approximately 200 undergraduate students per semester.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <div class="entry-title">Internship — Research &amp; Development</div>
+      <div class="entry-date">Dec 2015</div>
+    </div>
+    <div class="entry-place">Berger Paints Bangladesh Ltd., Savar, Dhaka, Bangladesh</div>
+  </div>
+
+  <h3 style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin:28px 0 14px;">Fellowship</h3>
+  <div class="entry">
+    <div class="entry-head">
+      <div class="entry-title">National Science &amp; Technology (NST) Fellowship</div>
+      <div class="entry-date">2016 – 2017</div>
+    </div>
+    <div class="entry-place">Ministry of Science and Technology, Bangladesh</div>
+    <p>Project: Synthesis, Investigation of PVA-ZnS and PVA-AgI-ZnO Nanocomposite Films: Their Application for Organic Dye Removal from Wastewater.</p>
+  </div>
+
+  <h3 style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin:28px 0 14px;">Leadership &amp; Affiliation</h3>
+  <div class="entry">
+    <div class="entry-head">
+      <div class="entry-title">Secretary, ACS Graduate Student Organization – OSU (ACSGSO-OSU)</div>
+      <div class="entry-date">Sep 2025 – Present</div>
+    </div>
+  </div>
+  <div class="entry">
+    <div class="entry-head">
+      <div class="entry-title">Advisor, ChemFusion</div>
+      <div class="entry-date">Mar 2021 – Present</div>
+    </div>
+  </div>
+  <div class="entry">
+    <div class="entry-head">
+      <div class="entry-title">Student Member, American Chemical Society (ACS)</div>
+      <div class="entry-date">Oct 2025 – Present</div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Laboratory &amp; Technical Skills</h2>
+  <div class="skill-grid">
+    <div class="skill-cat">
+      <h3>Bench Techniques</h3>
+      <div class="tag-row">
+        <span class="tag">Organometallic synthesis</span>
+        <span class="tag">Multi-step organic synthesis</span>
+        <span class="tag">Photochemical C–C coupling</span>
+        <span class="tag">Schlenk / glovebox technique</span>
+        <span class="tag">Extractions &amp; distillations</span>
+        <span class="tag">Solution preparation</span>
+      </div>
+    </div>
+    <div class="skill-cat">
+      <h3>Characterization</h3>
+      <div class="tag-row">
+        <span class="tag">NMR (1D/2D)</span>
+        <span class="tag">UV-Vis</span>
+        <span class="tag">FT-IR</span>
+        <span class="tag">TLC</span>
+        <span class="tag">GC-MS</span>
+      </div>
+    </div>
+    <div class="skill-cat">
+      <h3>Computational</h3>
+      <div class="tag-row">
+        <span class="tag">Gaussian</span>
+        <span class="tag">ORCA</span>
+        <span class="tag">Avogadro</span>
+        <span class="tag">Molden</span>
+        <span class="tag">HPC clusters</span>
+      </div>
+    </div>
+    <div class="skill-cat">
+      <h3>Software</h3>
+      <div class="tag-row">
+        <span class="tag">ChemDraw</span>
+        <span class="tag">MestReNova</span>
+        <span class="tag">OriginLab</span>
+        <span class="tag">LaTeX</span>
+        <span class="tag">MS Office</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p style="max-width:50ch;">
+    Department of Chemistry, Oklahoma State University, Stillwater, OK.
+    Reach out directly by email, or connect via LinkedIn / Google Scholar / ORCID above.
+  </p>
+  <div class="cta-row" style="margin-top:20px;">
+    <a href="mailto:supal@okstate.edu" class="btn btn-primary">supal@okstate.edu</a>
+  </div>
+</section>
+
+<footer>
+  <span class="muted">© 2026 Subrata Pal</span>
+  <span class="muted">Built with HTML &amp; CSS · Hosted on GitHub Pages</span>
+</footer>
+
+<script>
+  // Highlight active nav link on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('nav a');
+  const toggle = document.getElementById('nav-toggle');
+
+  function setActive(){
+    let current = '';
+    sections.forEach(sec=>{
+      const top = sec.offsetTop - 90;
+      if(window.scrollY >= top) current = sec.getAttribute('id');
+    });
+    navLinks.forEach(link=>{
+      link.classList.toggle('active', link.getAttribute('href') === '#'+current);
+    });
+  }
+  window.addEventListener('scroll', setActive);
+  setActive();
+
+  // Close mobile menu after clicking a link
+  navLinks.forEach(link=>{
+    link.addEventListener('click', ()=>{ if(toggle) toggle.checked = false; });
+  });
+</script>
+
+</body>
+</html>
