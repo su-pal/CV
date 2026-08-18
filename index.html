@@ -77,7 +77,7 @@
   .hero-inner{position:relative;z-index:1;max-width:720px;margin:0 auto;}
 
   .hero-photo-wrap{
-    width:130px;height:130px;border-radius:50%;margin:0 auto 22px;position:relative;z-index:1;
+    width:250px;height:250px;border-radius:50%;margin:0 auto 22px;position:relative;z-index:1;
     background:conic-gradient(from 180deg, var(--photon), var(--emit), var(--photon));
     padding:3px;box-shadow:0 10px 30px rgba(47,143,224,0.22);
   }
@@ -124,7 +124,7 @@
 
   /* ---------- Logo badge ---------- */
   .logo-badge{
-    position:relative;width:52px;height:52px;border-radius:50%;flex-shrink:0;
+    position:relative;width:100px;height:100px;border-radius:50%;flex-shrink:0;
     background:#fff;border:1px solid var(--line);
     display:flex;align-items:center;justify-content:center;overflow:hidden;
     box-shadow:0 2px 6px rgba(21,27,40,0.06);
@@ -151,10 +151,10 @@
   }
   .grad-card:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(21,27,40,0.08);}
   .grad-card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin-bottom:14px;}
-  .grad-date{font-family:'IBM Plex Mono',monospace;font-size:0.7rem;color:var(--photon);letter-spacing:0.05em;text-transform:uppercase;margin-bottom:6px;font-weight:500;}
-  .grad-title{font-size:1.05rem;font-weight:600;color:var(--text);margin-bottom:3px;}
-  .grad-place{font-size:0.87rem;color:var(--muted);margin-bottom:2px;}
-  .grad-advisor{font-size:0.83rem;color:var(--dim);font-style:italic;margin-bottom:8px;}
+  .grad-date{font-family:'IBM Plex Mono',monospace;font-size:0.8rem;color:var(--photon);letter-spacing:0.05em;text-transform:uppercase;margin-bottom:6px;font-weight:600;font-style:italic;}
+  .grad-title{font-size:1.05rem;font-weight:600;color:var(--text);margin-bottom:1px;}
+  .grad-place{font-size:0.8rem;color:var(--muted);font-style:italic;margin-bottom:8px;}
+  .grad-advisor{font-size:0.87rem;color:var(--text);font-weight:600;font-style:italic;margin-bottom:5px;}
   .grad-diss{font-size:0.87rem;color:#3b4354;}
   .grad-card ul{padding-left:18px;margin-top:10px;}
   .grad-card ul li{margin-bottom:6px;font-size:0.9rem;color:#3b4354;}
@@ -189,7 +189,7 @@
     transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
   }
   .box:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(21,27,40,0.08);border-left-color:var(--emit);}
-  .box-eyebrow{font-family:'IBM Plex Mono',monospace;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--photon);font-weight:600;margin-bottom:8px;}
+  .box-eyebrow{font-family:'IBM Plex Mono',monospace;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--photon);font-weight:600;font-style:italic;margin-bottom:6px;}
   .box-title{font-size:1rem;font-weight:600;color:var(--text);margin-bottom:4px;}
   .box-body{font-size:0.94rem;color:#3b4354;}
   .box-body a{color:var(--photon);}
@@ -307,7 +307,7 @@
     <p>
       I work with Professor Spencer P. Pitre at Oklahoma State University on cobalt-photocatalyzed reactions —
       studying first-row transition metal (Co) photocatalysts and their use in carbon–carbon bond-forming
-      reactions for pharmaceutically relevant molecules. Currently seeking postdoctoral research positions in
+      reactions for pharmaceutically relevant molecules. Currently seeking <strong>postdoctoral researcher position</strong> in
       photoredox catalysis or synthetic methodology development, with long-term interests in an independent
       academic research career.
     </p>
@@ -330,13 +330,13 @@
           <div>
             <div class="grad-date">Aug. 2022 – Present (Expected Dec. 2027)</div>
             <div class="grad-title">Ph.D. Candidate in Organic Chemistry</div>
+			<div class="grad-place">Department of Chemistry, Oklahoma State University, Stillwater, OK</div>
           </div>
           <div class="logo-badge">
             <img src="assets/logos/osu.png" alt="Oklahoma State University logo" onerror="this.remove()">
             <span>OSU</span>
           </div>
         </div>
-        <div class="grad-place">Department of Chemistry, Oklahoma State University, Stillwater, OK</div>
         <div class="grad-advisor">Advisor: Dr. Spencer P. Pitre</div>
         <div class="grad-diss">Dissertation (working title): "Structure–Activity Relationship Investigation of Cobalt Complexes for Photocatalyzed Reactions Under Visible Light Irradiation."</div>
       </div>
@@ -346,13 +346,13 @@
           <div>
             <div class="grad-date">Jan. 2016 – Apr. 2018</div>
             <div class="grad-title">MS in Organic Chemistry</div>
+			<div class="grad-place">Department of Chemistry, Shahjalal University of Science &amp; Technology, Sylhet, Bangladesh</div>
           </div>
           <div class="logo-badge">
             <img src="assets/logos/sust.png" alt="Shahjalal University of Science & Technology logo" onerror="this.remove()">
             <span>SUST</span>
           </div>
         </div>
-        <div class="grad-place">Department of Chemistry, Shahjalal University of Science &amp; Technology, Sylhet, Bangladesh</div>
         <div class="grad-advisor">Advisor: Dr. Mohammad Mizanur Rahman Khan</div>
         <div class="grad-diss">Dissertation: "Synthesis and Investigation of PVA–ZnS and PVA–AgI–ZnO Nanocomposite Films: Towards Efficient and Stable Photocatalyst for Organic Dye Removal."</div>
       </div>
@@ -362,13 +362,13 @@
           <div>
             <div class="grad-date">Jan. 2011 – Dec. 2015</div>
             <div class="grad-title">B.Sc. in Chemistry</div>
+			<div class="grad-place">Department of Chemistry, Shahjalal University of Science &amp; Technology, Sylhet, Bangladesh</div>
           </div>
           <div class="logo-badge">
             <img src="assets/logos/sust.png" alt="Shahjalal University of Science & Technology logo" onerror="this.remove()">
             <span>SUST</span>
           </div>
         </div>
-        <div class="grad-place">Department of Chemistry, Shahjalal University of Science &amp; Technology, Sylhet, Bangladesh</div>
       </div>
     </div>
   </div>
@@ -386,13 +386,13 @@
           <div>
             <div class="grad-date">Jan. 2025 – Present</div>
             <div class="grad-title">Graduate Research Assistant — Pitre Lab</div>
+			<div class="grad-place">Oklahoma State University, Stillwater, OK</div>
           </div>
           <div class="logo-badge">
             <img src="assets/logos/osu.png" alt="Oklahoma State University logo" onerror="this.remove()">
             <span>OSU</span>
           </div>
         </div>
-        <div class="grad-place">Oklahoma State University, Stillwater, OK</div>
         <ul>
           <li>Synthesized a library of cobaloxime catalysts and evaluated their catalytic performance alongside commercially available Co(II) catalysts in Giese-type reactions.</li>
           <li>Enabled acid-free regioselective cobalt-photocatalyzed C–H Minisci alkylation through urea activation of pyridines.</li>
@@ -407,13 +407,13 @@
           <div>
             <div class="grad-date">Jan. 2016 – Apr. 2018</div>
             <div class="grad-title">Graduate Research Assistant — MMR Khan Research Group</div>
+			<div class="grad-place">Shahjalal University of Science &amp; Technology, Sylhet, Bangladesh</div>
           </div>
           <div class="logo-badge">
             <img src="assets/logos/sust.png" alt="Shahjalal University of Science & Technology logo" onerror="this.remove()">
             <span>SUST</span>
           </div>
         </div>
-        <div class="grad-place">Shahjalal University of Science &amp; Technology, Sylhet, Bangladesh</div>
         <ul>
           <li>Synthesized PVA–ZnS and PVA–AgI–ZnO nanocomposite films with varied PVA compositions.</li>
           <li>Investigated their photocatalytic activity toward organic dye degradation.</li>
@@ -516,13 +516,13 @@
           <div>
             <div class="grad-date">Aug. 2022 – Dec. 2024</div>
             <div class="grad-title">Graduate Teaching Assistant</div>
+			<div class="grad-place">Oklahoma State University, Stillwater, OK</div>
           </div>
           <div class="logo-badge">
             <img src="assets/logos/osu.png" alt="Oklahoma State University logo" onerror="this.remove()">
             <span>OSU</span>
           </div>
         </div>
-        <div class="grad-place">Oklahoma State University, Stillwater, OK</div>
         <ul>
           <li>Instructed General Chemistry I Lab, Organic Chemistry I, Survey of Organic Chemistry and Lab.</li>
           <li>Led laboratory sessions of approximately 50 undergraduate students per semester; graded lab reports and exams.</li>
@@ -534,13 +534,13 @@
           <div>
             <div class="grad-date">Sep. 2019 – Jul. 2022</div>
             <div class="grad-title">Lecturer (Chemistry)</div>
+			<div class="grad-place">Green University of Bangladesh (GUB), Dhaka, Bangladesh</div>
           </div>
           <div class="logo-badge">
             <img src="assets/logos/gub.png" alt="Green University of Bangladesh logo" onerror="this.remove()">
             <span>GUB</span>
           </div>
         </div>
-        <div class="grad-place">Green University of Bangladesh (GUB), Dhaka, Bangladesh</div>
         <ul>
           <li>Instructed General Chemistry and Organic Chemistry (theory and laboratory).</li>
           <li>Led weekly discussion sections and laboratory sessions for approximately 200 undergraduate students per semester.</li>
@@ -656,7 +656,7 @@
     </div>
 
     <div class="contact-card reveal">
-      <form class="contact-form" id="inquiry-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <form class="contact-form" id="inquiry-form" action="https://formspree.io/f/xvkpwevl" method="POST">
         <label for="fname">First Name*</label>
         <input type="text" id="fname" name="first_name" placeholder="Jane" required>
         <label for="lname">Last Name*</label>
